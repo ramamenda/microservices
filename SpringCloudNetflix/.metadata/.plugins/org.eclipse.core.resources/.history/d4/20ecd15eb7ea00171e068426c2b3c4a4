@@ -1,0 +1,3 @@
+spring.application.name=retail-customeraccount
+server.port=9030
+eureka.client.service-url.defaultZone =http://${eureka.host:localhost}:${eureka.port:8010}/eureka/

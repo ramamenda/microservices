@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+/Users/rmenda/MendaHome/Programs/workspace/sts/microservices/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes

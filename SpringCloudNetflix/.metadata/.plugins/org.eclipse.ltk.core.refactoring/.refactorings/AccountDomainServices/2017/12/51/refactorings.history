@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AccountService.java&apos; to &apos;retail-customer-service/src/main/java/com.rbank.retail.services.domain.cust&apos;&#x0A;- Original project: &apos;AccountDomainServices&apos;&#x0A;- Destination element: &apos;retail-customer-service/src/main/java/com.rbank.retail.services.domain.cust&apos;&#x0A;- Original element: &apos;com.example.services.AccountService.java&apos;" description="Copy compilation unit" destination="=retail-customer-service/src\/main\/java&lt;com.rbank.retail.services.domain.cust" element1="/src\/main\/java&lt;com.example.services{AccountService.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1513657557270" units="1" version="1.0"/>
+</session>

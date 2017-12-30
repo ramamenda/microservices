@@ -1,0 +1,23 @@
+1512958574602	Rename resource 'bootstrap.yml'
+1512964886876	Delete element
+1512964893412	Delete element
+1512964908828	Delete element
+1512964932483	Rename resource 'configproperties-dev.yml'
+1512964943423	Copy file
+1512964951844	Delete element
+1512965018707	Copy file
+1512965481562	Move file
+1512965484796	Move file
+1512965495770	Delete element
+1512966905809	Rename resource 'application.yml'
+1512966922061	Rename resource 'application2.yml.backup'
+1512966936911	Copy file
+1513044405210	Rename resource 'application.yml'
+1513047157846	Rename resource 'application.properties'
+1513048217978	Rename resource 'application-development.properties'
+1513140809500	Rename package 'demo'
+1513140868681	Rename type 'App'
+1513140878564	Delete element
+1513140907147	Rename type 'ConfigServer1ApplicationTests'
+1513141431428	Rename resource 'foo.properties'
+1513141445990	Rename resource 'foo-development.properties'

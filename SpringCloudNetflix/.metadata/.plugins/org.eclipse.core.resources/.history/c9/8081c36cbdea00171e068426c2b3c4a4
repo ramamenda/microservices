@@ -1,0 +1,5 @@
+spring.application.name=retail-account
+server.port=9020
+eureka.client.service-url.defaultZone =http://${eureka.host:localhost}:${eureka.port:8010}/eureka/
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true

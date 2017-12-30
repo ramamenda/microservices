@@ -1,0 +1,5 @@
+spring.application.name=platform-zipkindashboard-service
+server.port=9411
+eureka.client.service-url.defaultZone=http://${eureka.host:localhost}:${eureka.port:8761}/eureka/
+
+
