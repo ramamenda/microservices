@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: example-config-client
+  cloud:
+    config:
+      label: master # optional
+      uri: http://localhost:8010 # optional
+      
+  profiles:
+    active: dev

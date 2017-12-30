@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="AccountDomainServices"/>
+<aop-project name="sample-hystrix-config"/>
+<aop-project name="CloudConfigClient"/>
+<aop-project name="ServiceRegistryEureka"/>
+<aop-project name="sample-hystrix-aggregate"/>
+<aop-project name="GatewayZuul"/>
+<aop-project name="sample-config-server"/>
+<aop-project name="PresentationServices">
+<aspect-definition advice-class-name="com.netflix.hystrix.contrib.javanica.aop.aspectj.HystrixCommandAspect" advice-method-name="methodsAnnotatedWithHystrixCommand(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="-1" aspect-name="hystrixCommandAspect" aspect-start-line-number="-1" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/PresentationServices/src/main/java/com/rhomes/microservices/portal/PresentationServicesApp.java" pointcut-expression="hystrixCommandAnnotationPointcut() || hystrixCollapserAnnotationPointcut()" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:PresentationServices|3:java:com.rhomes.microservices.portal.PresentationServicesApp|8:accountUtil:11" bean-file="/PresentationServices/src/main/java/com/rhomes/microservices/portal/services/AccountUtil.java" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/PresentationServices/src/main/java/com/rhomes/microservices/portal/PresentationServicesApp.java" source="=PresentationServices/\/Users\/rmenda\/.gradle\/caches\/modules-2\/files-2.1\/com.netflix.hystrix\/hystrix-javanica\/1.5.12\/5e4d888e0dba811e8ac3a9dbc8cbcc511734ace4\/hystrix-javanica-1.5.12.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=PresentationServices/src\/main\/java&lt;com.rhomes.microservices.portal.services{AccountUtil.java[AccountUtil~getAccount~QString;" target-start-line="20"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="sample-hystrix-eureka"/>
+<aop-project name="CloudConfigServer"/>
+<aop-project name="TurbineService"/>
+<aop-project name="sample-hystrix-gateway"/>
+<aop-project name="CircuitBreakerHystrix"/>
+<aop-project name="sample-hystrix-monitor"/>
+<aop-project name="sample-hystrix-service"/>
+</aop-reference-model>

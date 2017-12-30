@@ -1,0 +1,6 @@
+spring.application.name=platform-turbine-service
+server.port=8040
+turbine.app-config=olb-retail-accountsummary-service,retail-account
+eureka.client.service-url.defaultZone=http://${eureka.host:localhost}:${eureka.port:8761}/eureka/
+
+

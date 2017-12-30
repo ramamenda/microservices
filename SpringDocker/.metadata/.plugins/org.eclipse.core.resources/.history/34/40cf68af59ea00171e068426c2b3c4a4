@@ -1,0 +1,66 @@
+package com.rbank.olb.retail.services.accountsummary;
+
+import java.net.URI;
+import java.util.List;
+import java.util.logging.Logger;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.rbank.domain.retail.model.Account;
+import com.rbank.domain.retail.model.Customer;
+
+@Component
+public class AccountSummaryUtil {
+
+	private static final Logger LOG = Logger.getLogger(AccountSummaryUtil.class.getName());
+	
+	private final RestTemplate restTemplate;
+
+	public AccountSummaryUtil(RestTemplate rest) {
+		this.restTemplate = rest;
+	}
+
+	@Autowired
+	private LoadBalancerClient loadBalancerClient;
+
+	@HystrixCommand(fallbackMethod = "getCustomerFallbackMethod")
+	public Customer getCustomer(String custId) {
+		LOG.info("********** getCustomer *********** begin ");
+		String customerDomainServiceName = "retail-customer";
+		ServiceInstance serviceInstance = loadBalancerClient.choose(customerDomainServiceName);
+		System.out.println("URL1 : ");
+		String baseUrl = serviceInstance.getUri().toString();
+		String url = baseUrl + "/retailcustomers/" + custId;
+		System.out.println("URL : " + url);
+		URI uri = URI.create(url);
+		LOG.info("********** getCustomer *********** end ");
+		return this.restTemplate.getForObject(uri, Customer.class);
+	}
+
+	@HystrixCommand(fallbackMethod = "getAccountsFallbackMethod")
+	public List<Account> getAccounts(String custId) {
+		System.out.println(" ----------- in AccountSummaryUtil.getAccounts() ---------------------");
+		String customerAccountsDomainServiceName = "retail-customeraccount";
+		ServiceInstance serviceInstance = loadBalancerClient.choose(customerAccountsDomainServiceName);
+		String baseUrl = serviceInstance.getUri().toString();
+		String url = baseUrl + "/retailcustomers/" + custId + "/accounts";
+		System.out.println("URL : " + url);
+		URI uri = URI.create(url);
+		return this.restTemplate.getForObject(uri, List.class);
+	}
+
+	public Customer getCustomerFallbackMethod(String custId) {
+		System.out.println(" ----------- in AccountSummaryUtil.getCustomerFallbackMethod() ---------------------");
+		return null;
+	}
+
+	public List<Account> getAccountsFallbackMethod(String custId) {
+		System.out.println(" ----------- in AccountSummaryUtil.getAccountsFallbackMethod() ---------------------");
+		return null;
+	}
+}

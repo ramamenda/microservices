@@ -1,0 +1,5 @@
+spring.application.name=retail-olb-accountsummary
+server.port=7000
+spring.sleuth.sampler.percentage=1.0
+eureka.client.service-url.defaultZone =http://${eureka.host:localhost}:${eureka.port:8010}/eureka/
+spring.sleuth.enabled = true

@@ -1,0 +1,10 @@
+1513736941985	Rename type 'CustomerService'
+1513737001190	Rename type 'CustomerServiceApplication'
+1513737003608	Rename type 'CustomerServiceApplicationTests'
+1513747106693	Delete element
+1513747123944	Rename type 'AccountDAO'
+1513796035342	Rename package 'com.rbank.retail.dao'
+1513796043536	Rename package 'com.rbank.retail.model'
+1513796050356	Rename package 'com.rbank.doomain.retail.model'
+1513796060185	Rename package 'com.rbank.retail.services.customer'
+1513796073943	Rename package 'com.rbank.retail.services.customer'
